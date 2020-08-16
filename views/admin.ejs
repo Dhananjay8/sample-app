@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Personal Information</h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Telephone</th>
+    <th>SSN</th>
+    <th>Address</th>
+  </tr>
+  <% for(var i = 0; i < personalinfo.length; i++) {%>
+  <tr>
+    <td><%= personalinfo[i].firstname %></td>
+    <td><%= personalinfo[i].lastname %></td>
+    <td><%= personalinfo[i].telephone %></td>
+    <td><%= personalinfo[i].ssn %></td>
+    <td><%= personalinfo[i].address %></td>
+  </tr>
+  <% } %>
+</table>
+
+</body>
+</html>
